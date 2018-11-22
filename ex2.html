@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="ex2.js"></script>
+  <style>
+  .title_header { border: 1px solid blue;
+				  width: 49%;
+				  float: left;
+				  margin: 10px 5px 2px 5px;
+				  background-color: LightSkyBlue;}
+				  
+  .select_header { width: 400px;
+				   margin: 1px 3px 1px 3px;
+				   text-align-last: center;}	
+
+  .question_show { width: 800px;
+				   margin: 1px 3px 1px 3px;
+				   text-align-last: center;
+				   font-size: 28px;}
+
+  .answers_show {  width: 800px;
+				   margin: 1px 3px 1px 3px;
+				   text-align-last: center;
+				   font-size: 28px;
+				   background-color: lightgreen;}
+				     
+</style>
+</head>
+<body>
+	<center class="title_header">Select Category</center>
+	<center class="title_header">Select Type</center>
+	<br></br>
+<center>
+	<select id="category" name="category" class="select_header">
+			<option value="9">General Knowledge</option>
+			<option value="10">Entertainment: Books</option>
+			<option value="11">Entertainment: Film</option>
+			<option value="12">Entertainment: Music</option>
+			<option value="13">Entertainment: Musicals &amp; Theatres</option>
+			<option value="14">Entertainment: Television</option>
+			<option value="15">Entertainment: Video Games</option>
+			<option value="16">Entertainment: Board Games</option>
+			<option value="17">Science &amp; Nature</option>
+			<option value="18">Science: Computers</option>
+			<option value="19">Science: Mathematics</option>
+			<option value="20">Mythology</option>
+			<option value="21">Sports</option>
+			<option value="22">Geography</option>
+			<option value="23">History</option>
+			<option value="24">Politics</option>
+			<option value="25">Art</option>
+			<option value="26">Celebrities</option>
+			<option value="27">Animals</option>
+			<option value="28">Vehicles</option>
+			<option value="29">Entertainment: Comics</option>
+			<option value="30">Science: Gadgets</option>
+			<option value="31">Entertainment: Japanese Anime &amp; Manga</option>
+			<option value="32">Entertainment: Cartoon &amp; Animations</option>		
+	</select>
+			
+	<select id="type" name="type" class="select_header">
+			<option value="multiple">Multiple Choice</option>
+			<option value="boolean">True / False</option>
+	</select>
+	<br></br>
+	<button type="button" onclick="gen_question()">Generate Question</button>
+	<br></br>
+	<div id="get_question" class="question_show"></div>
+	<br></br>
+	<div id="answers_choice"></div>
+	<br></br>
+	<div id="score"></div>
+	</center>
+</body>
+</html>
+

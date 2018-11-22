@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<style>
+	.text_editor {height: 400px;
+				  width: 48%;
+				  margin: 2px 5px 2px 5px; 
+				  border: 2px solid black;
+				  float: left;}
+				  
+	.display_box {height: 400px;
+				  width: 48%;
+				  margin: 2px 20px 1px 1px; 
+				  border: 2px solid black;
+				  float: right;}
+				  
+	.run_code_button {margin: 5px 5px 2px 5px;
+					  width: 48%;
+					  float: left;}
+	
+	.html_title {margin: 5px 20px 2px 5px;
+					  width: 48%;
+					  background-color: lightgrey;
+					  float: right;
+					  border: 1px solid black;
+					  height: 30px;}
+</style>
+</head>
+<title></title>
+<body>
+ <script>
+function update_text() {
+	var code = document.getElementById("text_window").value;
+    document.getElementById("display_window").innerHTML = code;
+}
+</script>
+<div>
+<button class="run_code_button" onclick="update_text()">Run Code</button>
+<center class="html_title">Html Page</center>
+<br></br>
+  <textarea id="text_window" class="text_editor" name="editor"> </textarea>
+  <div class="display_box" id="display_window"></div>
+ </div>
+</body>
+</html>
